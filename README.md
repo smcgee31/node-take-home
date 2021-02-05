@@ -1,13 +1,10 @@
-# Node Starter
+# GuideCX: Backend Assessment
 
-I needed a TS + Node starter, so I took [this](https://github.com/microsoft/TypeScript-Node-Starter) and ripped out all of the views since I want a JSON API only app. Should be able to reuse this for a GraphQL app really easily since this is very bare-bones.
-
-## includes
+## Technology
 
 - Node 14 + Express
 - TypeScript
 - Docker
-- Terraform
 - Jest
 - Prettier
 - Eslint
@@ -20,8 +17,16 @@ Update your `.env` file with appropriate values (see another team member)
 $ cp .env.example .env
 ```
 
+With Docker:
+
 ```
 $ docker-compose up
+```
+
+Without Docker:
+
+```
+$ npm run dev
 ```
 
 ## Debugging
