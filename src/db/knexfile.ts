@@ -1,6 +1,6 @@
-import { Config } from 'knex'
+import { Config } from 'knex';
 
-import * as settings from '../config/settings'
+import * as settings from '../config/settings';
 
 const config: Config = {
   client: 'pg',
@@ -21,6 +21,6 @@ const config: Config = {
   seeds: {
     directory: './seeds',
   },
-}
+};
 
-export default config
+export default config;

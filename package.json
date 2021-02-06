@@ -32,6 +32,7 @@
     "express": "^4.17.1",
     "knex": "^0.21.17",
     "lusca": "^1.6.1",
+    "module-alias": "^2.2.2",
     "pg": "^8.5.1",
     "winston": "^3.2.1"
   },
@@ -73,5 +74,8 @@
       "npm run lint",
       "npm t -- --passWithNoTests"
     ]
+  },
+  "_moduleAliases": {
+    "~": "dist"
   }
 }

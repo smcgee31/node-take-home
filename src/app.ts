@@ -1,18 +1,22 @@
-import express from 'express'
-import compression from 'compression'
-import lusca from 'lusca'
+import express from 'express';
+import compression from 'compression';
+import lusca from 'lusca';
 
-import { health } from './controllers/health'
-import * as settings from './config/settings'
+import * as settings from './config/settings';
+import { health, home } from './controllers/root';
+import * as taskList from './controllers/task-list';
 
-const app = express()
-app.set('port', settings.port)
+const app = express();
+app.set('port', settings.port);
 
-app.use(compression())
+app.use(compression());
 
-app.use(lusca.xframe('SAMEORIGIN'))
-app.use(lusca.xssProtection(true))
+app.use(lusca.xframe('SAMEORIGIN'));
+app.use(lusca.xssProtection(true));
 
-app.get('/health', health)
+app.get('/', home);
+app.get('/health', health);
 
-export default app
+app.get('/api/task-lists', taskList.list);
+
+export default app;
