@@ -19,5 +19,14 @@ services:
     volumes:
       - ./:/usr/src/app:delegated
     ports:
-      - 3002:3000
+      - '${PORT}:${PORT}'
       - 9229:9229
+
+  pg:
+    image: postgres:13-alpine
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: 'trust'
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data:cached

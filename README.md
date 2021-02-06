@@ -41,7 +41,7 @@ is updated accordingly.
 ## Technology
 
 - Node 14 + Express
-- TypeScript (if you're wanting to stick to JS for now, checkout the [`javascript`](https://github.com/guidecx/node-take-home/tree/javascript) branch)
+- TypeScript
 - Docker
 - Jest
 - Prettier
