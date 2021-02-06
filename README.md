@@ -1,5 +1,10 @@
 # GuideCX: Backend Assessment
 
+You can complete the requirements below without using this repo. We've put together a starter to
+take care of some of the base database and model setup, but you're not required to use this stack
+if you're more comfortable with another one. The purpose of this excercise is to gauge how well
+you can understand the business requirements and implement that into a Rest API
+
 ## Instructions
 
 1. fork this repo
@@ -47,12 +52,18 @@ is updated accordingly.
 - Prettier
 - Eslint
 
-## Development
+## Setup
 
-Update your `.env` file with appropriate values (see another team member)
+- Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 ```
 $ cp .env.example .env
+```
+
+```
+$ npm install
+$ npm db:setup
+$ docker-compose up
 ```
 
 With Docker:
