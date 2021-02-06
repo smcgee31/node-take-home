@@ -28,20 +28,33 @@ is updated accordingly.
 ### Requirements
 
 - Build an idempotent Rest API
-- CRUD endpoints for `Task`
-  - a task has the following attributes:
-    - name: string
-    - status: enum [`not_started`, `in_progress`, `complete`]
-    - duration: integer - number of days from start that task is expected to be completed
-    - dependency: FK (another task)
-- CR endpoints for `TaskList`. TaskLists can have any number of tasks, but a task always belongs to a TaskList
-  - a TaskList has the following attributes
-    - name: string
-    - started_at: datetime
-    - due_date: date
-    - forecasted_completion_date: date
-    - tasks: Task[]
-- accurate forecasted end date of a task list that responds to tasks being completed early or late
+- CRUD Task & TaskList resources, including ability to add/remove tasks in a List
+- Ability to change a task status
+- _Priority_: Accurate forecasted end date of a task list that responds to tasks being completed early or late
+
+#### Task Attributes
+
+- id: int
+- name: string
+- status: enum [`not_started`, `in_progress`, `complete`]
+- duration: integer - number of days from start that task is expected to be completed
+- started_at: datetime
+- due_date: date
+- dependency_id: FK (another task)
+- task_list_id: FK
+- created_at
+- updated_at
+
+#### TaskList Attributes
+
+- id: int
+- name: string
+- started_at: datetime
+- due_date: date
+- forecasted_completion_date: date
+- tasks: Task[]
+- created_at
+- updated_at
 
 ## Technology
 
@@ -64,18 +77,6 @@ $ cp .env.example .env
 $ npm install
 $ npm db:setup
 $ docker-compose up
-```
-
-With Docker:
-
-```
-$ docker-compose up
-```
-
-Without Docker:
-
-```
-$ npm run dev
 ```
 
 ## Debugging
