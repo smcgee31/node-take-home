@@ -35,7 +35,7 @@ export function home(req: Request, res: Response) {
       </p>
       <p>
         The team can only work on one task at a time, and must complete that task before moving onto the next one. Each
-        task has a duration in days, so you can estimate when it will be completed as soon as the status changes to "In Progess".
+        task has a duration in days, so you can estimate when it will be completed as soon as the status changes to "In Progress".
         Once a task is "Complete", then the next task in the list moves to "In Progress" and the forecasted completion date
         is updated accordingly.
       <p>
