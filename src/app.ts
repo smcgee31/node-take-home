@@ -19,4 +19,10 @@ app.get('/health', health);
 
 app.get('/api/task-lists', taskList.list);
 
+app.get('/api/get-task', taskList.getTask);
+app.get('/api/get-tasks', taskList.getTasks);
+app.post('/api/create-task', taskList.createTask);
+app.post('/api/delete-task', taskList.deleteTask);
+app.post('/api/update-task', taskList.updateTask);
+
 export default app;
