@@ -2,7 +2,7 @@
 
 You can complete the requirements below without using this repo. We've put together a starter to
 take care of some of the base database and model setup, but you're not required to use this stack
-if you're more comfortable with another one. The purpose of this excercise is to gauge how well
+if you're more comfortable with another one. The purpose of this exercise is to gauge how well
 you can understand the business requirements and implement that into a Rest API
 
 ## Instructions
@@ -21,7 +21,7 @@ forecasts to be updated as tasks are completed. If a task is completed early, th
 forecasted end date. If a task is completed late, then the forecast is going to be late.
 
 The team can only work on one task at a time, and must complete that task before moving onto the next one. Each
-task has a duration in days, so you can estimate when it will be completed as soon as the status changes to "In Progess".
+task has a duration in days, so you can estimate when it will be completed as soon as the status changes to "In Progress".
 Once a task is "Complete", then the next task in the list moves to "In Progress" and the forecasted completion date
 is updated accordingly.
 
